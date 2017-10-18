@@ -81,7 +81,7 @@ public class aty2 extends AppCompatActivity
                 Bundle b = new Bundle();
                 b.putString("suger_level",suger);
                 b.putString("drink_level",temp);
-                b.putString("ice",ice_opt);
+                b.putString("ice_level",ice_opt);
                 i.putExtras(b);
                 setResult(101,i);
                 finish();
