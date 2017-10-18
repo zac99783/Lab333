@@ -77,21 +77,21 @@
                 android:text="微冰"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton1"
+                android:id="@+id/radioButton0"
                 android:checked="true" />
 
             <RadioButton
                 android:text="少冰"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButton1"
                 android:checked="true"/>
 
             <RadioButton
                 android:text="正常冰"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButton2"
                 android:checked="true" />
         </RadioGroup>
 

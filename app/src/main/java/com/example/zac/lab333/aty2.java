@@ -22,11 +22,11 @@ public class aty2 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main2);
         RadioGroup rg1 = (RadioGroup) findViewById(R.id.radioGroup1);
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener())
+        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
-            public void onCheckedChanged(RadioGroup group ,int checkId)
+            public void onCheckedChanged(RadioGroup group ,int checkedId)
             {
-                switch (checkId)
+                switch (checkedId)
                 {
                     case  R.id.radio0:
                         suger = "無糖";
@@ -47,22 +47,22 @@ public class aty2 extends AppCompatActivity
             }
         });
 
-        RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup1);
-        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener())
+        RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup);
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group ,int checkedId)
             {
                 switch (checkedId)
                 {
-                    case  R.id.radioButton1:
+                    case  R.id.radioButton0:
                         ice_opt = "微冰";
                         break;
 
-                    case  R.id.radioButton2:
+                    case  R.id.radioButton1:
                         ice_opt = "少冰";
                         break;
 
-                    case  R.id.radioButton3:
+                    case  R.id.radioButton2:
                         ice_opt = "正常冰";
                         break;
                 }
@@ -70,9 +70,9 @@ public class aty2 extends AppCompatActivity
         });
 
         sent_bin = (Button) findViewById(R.id.sent);
-        sent_bin.setOnClickListener(new View.OnContextClickListener()
+        sent_bin.setOnClickListener(new View.OnClickListener()
         {
-            @override
+            @Override
             public void onClick(View v)
             {
                 set_drink = (EditText) findViewById(R.id.editText1);
@@ -82,7 +82,7 @@ public class aty2 extends AppCompatActivity
                 b.putString("suger_level",suger);
                 b.putString("drink_level",temp);
                 b.putString("ice",ice_opt);
-                i.putExtra(b);
+                i.putExtras(b);
                 setResult(101,i);
                 finish();
             }

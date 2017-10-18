@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static android.R.attr.data;
 
 
-public class aty1 extends AppCompatActivity {
+public class aty1 extends AppCompatActivity
+{
 
     Button btn;
     TextView t_drink;
@@ -22,18 +24,18 @@ public class aty1 extends AppCompatActivity {
         setContentView(R.layout.main1);
 
 
-        btn =(Button)findViewById(R.id.sent);
-        btn.setOnClickListener(new View.OnContextClickListener()
-        {
-            public  void onClick(View v)
-            {
+        btn = (Button) findViewById(R.id.sent);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent i = new Intent();
-                i.setClass(aty1.this,aty2.class);
-                startActivityForResult(i,0);
-            });
-        }
+                i.setClass(aty1.this, aty2.class);
+                startActivityForResult(i, 0);
+            }
+        });
+    }
 
-    protected void onActivityResult(int requestCode , int resultCode ,Intent data)
+    protected void onActivityResult (int requestCode , int resultCode ,Intent data)
     {
         if(requestCode == 0)
         {
@@ -62,5 +64,5 @@ public class aty1 extends AppCompatActivity {
 
 
 
-}
-        }
+
+
